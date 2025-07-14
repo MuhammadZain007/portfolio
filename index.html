@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section">
+    <div class="content">
+      <h2>Hello, I'm <strong>Muhammad Zain</strong></h2>
+      <h1>Frontend Developer</h1>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <!-- Text + Profile Photo -->
+    <div class="about-text">
+      <p>
+        Hello! I'm a <strong>Front-End Developer</strong> with experience in <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. I enjoy designing responsive, modern, and user-friendly websites. Below is one of my achievement certificates.
+        I'm also work with <strong>python language</strong> , a good hand experienced in python with its most of <strong>modules</strong>, <strong>libraries</strong>, and also on<strong>file handling</strong>
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="mypic.jpg" alt="My Photo">
+    </div>
+  </div>
+
+  <!-- Certificate Section -->
+  <div class="certificate-box">
+    <h3>My Certificate</h3>
+    <img src="certificate.jpg" alt="My Certificate" class="certificate-img">
+  </div>
+</section>
+ <section class="resume-section">
+    <h2>My Resume</h2>
+      <a href="myresume2.jpg" target="_blank" class="btn">View Resume</a>
+      <!-- <img src="myresume2.jpg" alt="Click to View Resume" class="resume-thumb"> -->
+    </a>
+    <p>Click on the image to open full resume</p>
+  </section>
+
+
+
+  PROJECT SECTION
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Clinic Management System</h3>
+        <p>Built using HTML, CSS, JS</p>
+        <a href="https://github.com/zainawan007/clinic-_management_system.git">View</a>
+      </div>
+      <div class="project-card">
+        <h3>Hotal Management System</h3>
+        <p>Bulit using python ,.txt</p>
+        <a href="https://github.com/zainawan007/hotal_management_system.git">View</a>
+      </div>
+      <div class="project-card">
+        <h3>snake game</h3>
+        <p>2d python based snake game</p>
+        <a href="https://github.com/MuhammadZain007/snak_game_with_pyton.git">View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+      <p><strong>Address:</strong> h# 311/a st# 188, dy yaqoob qaloony, New Bhogiwal, Baghbanpura, lahore, pakistan</p>
+      <p><strong>Phone:</strong> +92340470513</p>
+      <p><strong>Email:</strong> malikzainawan672gmail.com</p>
+  </section>
+
+ <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <h3>Contact Me</h3>
+    <div class="footer-links">
+      <a href="mailto:malikzainawan672@gmail.com">📧 Gmail</a>
+      <a href="tel:+923404708513">📞 Call</a>
+      <a href="https://linkedin.com/in/muhammad-zain-ali-haider-" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/MuhammadZain007" target="_blank">💻 GitHub</a>
+    </div>
+    <p class="footer-copy">© 2025 muhammad zain. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script>
+  const input = document.getElementById('certificateUpload');
+  const preview = document.getElementById('previewBox');
+
+  input.addEventListener('change', function () {
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      preview.innerHTML = `<img src="${e.target.result}" alt="Certificate Preview">`;
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+
+</body>
+</html>
